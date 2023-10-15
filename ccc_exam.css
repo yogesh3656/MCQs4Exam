@@ -1,0 +1,85 @@
+       body {
+            font-family: Times New Roman, sans-serif;
+            color: black;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .question {
+            margin-bottom: 20px;
+            cursor: pointer; /* Add cursor pointer for questions to indicate interactivity */
+        }
+        .choices label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .incorrect {
+            color: red;
+        }
+        .Bold {
+            font-weight: bold;
+        }
+        .unanswered {
+            color: green;
+        }
+		
+        #timer {
+            font-size: 20px;
+            font-weight: bold;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+
+/* Reset default link styles */
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+/* Style the stylish link */
+.stylish-link {
+    display: inline-block; /* Display as a block element */
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: #001635f0; /* Background color */
+    color: #fff; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Hover effect */
+.stylish-link:hover {
+    background-color: #1d5377; /* Darker background color on hover */
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+/* Style the form container (optional) */
+.form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style the submit button */
+.stylish-button {
+    background-color: #3498db; /* Background color */
+    color: #fff; /* Text color */
+    padding: 12px 24px; /* Padding for spacing */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Hover effect */
+.stylish-button:hover {
+    background-color: #2980b9; /* Darker background color on hover */
+}
+      
