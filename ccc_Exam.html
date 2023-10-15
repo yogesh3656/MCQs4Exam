@@ -1,0 +1,650 @@
+
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://github.com/yogesh3656/MCQs4Exam/blob/94ebb07db64c830a995c510730d362c472e8cf48/ccc_exam.css">
+</head>
+<body class="w3-container">
+
+
+  
+  
+    <h4>A.Select correct answer from given options (50 Marks):</h4>
+  <h4>B.Give the answer of the following statements in true or false (50 Marks):</h4><br>
+    <form id="mcqForm">
+        <div id="questionsContainer"></div>
+      <div class='form'>
+        <button onclick="stopTimerAndGrade()" type="button" class="stylish-button">Submit</button>
+      <a  class="stylish-link" href='https://mcqs4exam.blogspot.com/2023/10/ccc.html' > Goto CCC </a></div>
+    </form>
+    <div id="timer"></div>
+  <div class="w3-panel w3-card w3-light-grey" id="result"><div class="w3-container w3-white" id="resultMid"></div></div>
+
+    <script>
+ 
+      
+      
+        let timerInterval;
+        let startTime;
+        let endTime;
+
+        // Define the questions and answers dynamically
+        const questions = [
+            {
+                question: "The .......... effects are used to apply movement to the images and objects in slides.",
+                options: ["(a).transition", "(b).animation", "(c).Both (a) and (b)", "(d). None of these"],
+                correctAnswer: 1
+            },
+            {
+                question: "The list of coded instructions is called",
+                options: ["computer program", "algorithm", "utility program", "None of these"],
+                correctAnswer: 0
+            },
+            {
+                question: "The time it takes a device to lacate data and instructions and make them available to the CPU is know as",
+                options: ["clock speed", "a processing cycle", "CPU speed", "access time"],
+                correctAnswer: 3
+            },
+
+          
+{
+    question: "Which output device is used for translating information from a computer into pictorial form on paper?",
+    options: ["Mouse", "Plotter", "Punched cards", "None of these"],
+    correctAnswer: 1
+},
+{
+    question: "A general purpose single user microcomputer designed to be operated by one person at a time is ",
+    options: ["special purpose computer ", "KIPS", "KB", "PC"],
+    correctAnswer: 3
+},
+{
+    question: "In which of the following tab, you can find proofing group in MS-Word?",
+    options: ["View", "Review", "Insert", "New"],
+    correctAnswer: 1
+},
+{
+    question: "IT stands for ",
+    options: ["Integrated Technology", "Interesting Technology", "Information Technology", "Intelligent Technology"],
+    correctAnswer: 2
+},
+{
+    question: "Which operations in not performed by computer?",
+    options: ["Inputting", "Processing", "Controlling", "Understanding"],
+    correctAnswer: 3
+},
+{
+    question: "When you copy a formula ",
+    options: ["Excel edits cell references in the newly copied formula ", "Excel adjusts absolute cell references", "Excel erases the original copy of the formula", "Excel doen't adjust relative cell references"],
+    correctAnswer: 0
+},
+{
+    question: "The symbol used in an assembly language are",
+    options: ["codes", "mnemonics", "assembler", "All of these"],
+    correctAnswer: 1
+},
+{
+    question: "CD-ROM stands for",
+    options: ["Compactable Read Only Memory", "Compact Data Read Only Memory", "Compactable Disk Read Only Memory", "Compact Disk Read Only Memory"],
+    correctAnswer: 3
+},
+{
+    question: "Operating system is the most common type of .......... software.",
+    options: ["management", "application", "system", "communication"],
+    correctAnswer: 2
+},
+{
+    question: "Which of the following is not an option of clipboard group in Home tab?",
+    options: ["Cut", "Format Painter", "Copy", "Page setup"],
+    correctAnswer: 3
+},
+{
+    question: "........... is a form of permanent memory that holds all the instructionsthe computer needs to start up does not get erased when the power is turn off.",
+    options: ["The Network Interface Card (NIC)", "The CPU", "RAM ", "ROM"],
+    correctAnswer: 3
+},
+{
+    question: "Which of the following is the popular name of the norms by which a bank satisfies itself about the customer's identity and activities?",
+    options: ["Basel norms", "KYC norms", "Service norms", "Lending norms"],
+    correctAnswer: 1
+},
+{
+    question: "A website address is an unique name that identifies a specific .............. on the Web.",
+    options: ["web browser", "pda", "website", "link"],
+    correctAnswer: 2
+},
+{
+    question: "Line spacing refers to ",
+    options: ["(a). the space between the lines of text", "(b). the height of lines", "(c). the length of line", "(d). Both (a) and (c)"],
+    correctAnswer: 0
+},
+{
+    question: "An Excel workbook is a collections of ",
+    options: ["workbooks", "charts", "worksheets", "worksheets and charts"],
+    correctAnswer: 3
+},
+{
+    question: "DVD stands for",
+    options: ["Digital Video Disc", "Digital and Video Drive", "Double Volume Density", "Disk Virtual Drive"],
+    correctAnswer: 0
+},
+{
+    question: "Binary means",
+    options: ["there are two possibilies: on and off", "the same as a byte: 8 bits", "there are three options: 0,1, and 2", "that computers really need to have three or more options"],
+    correctAnswer: 0
+},
+{
+    question: "To log on to the network, a user must enter their",
+    options: ["money", "username and password", "full name", "job profile"],
+    correctAnswer: 1
+},
+{
+    question: "Microsoft Excel is a powerful",
+    options: ["word processing software", "spreadsheet package", "DBMS package", "communication package"],
+    correctAnswer: 1
+},
+{
+    question: "UNIVAC is",
+    options: ["Universal Automatic Computer", "Unique Automatic Computer", "Universal Array Computer", "Unvalued Automatic Computer"],
+    correctAnswer: 0
+},
+{
+    question: "The hardware device commonly referred to as the brain of the computer is the ",
+    options: ["RAM chip", "data input", "CPU ", "secondary storage"],
+    correctAnswer: 2
+},
+{
+    question: "Which of the following is first generation computer?",
+    options: ["EDSAC", "CDC-1604", "1BM-1401", "None of these"],
+    correctAnswer: 0
+},
+{
+    question: "Websites contain many pages that can be navigated using ",
+    options: ["bars", "threads", "links", "strings"],
+    correctAnswer: 2
+},
+{
+    question: "Chief component of first generation computer was",
+    options: ["translators", "vaccum tubes", "integrated circuits", "None of these"],
+    correctAnswer: 1
+},
+{
+    question: "Which of the follwing is required to communicate between two computers?",
+    options: ["Communications software", "Protocol", "Communication hardware", "All of the above"],
+    correctAnswer: 3
+},
+{
+    question: "In the URL http://www.google.com, the portion labelled http is the ",
+    options: ["host", "domain name", "protocol", "top-level domain"],
+    correctAnswer: 2
+},
+{
+    question: "A dedicated computer ",
+    options: ["is used by one person only", "is assigned one and only one task", "uses only one kind of software", "is meant for application software"],
+    correctAnswer: 1
+},
+{
+    question: "The number of pixels displayed on a screen is",
+    options: ["resolution", "colur depth", "refresh rate", "viewing size"],
+    correctAnswer: 0
+},
+{
+    question: "Word processing, spreadsheet, and photo-editing are example of ",
+    options: ["application software", "system software", "operating system software", "platform software"],
+    correctAnswer: 0
+},
+{
+    question: "Accidently, you made a mistake when working with your document. How can you undo that action?",
+    options: ["Ctrl+X ", "Ctrl+Y", "Ctrl+Z", "Ctrl+U"],
+    correctAnswer: 2
+},
+{
+    question: "The ............. shows all the websites and pages that you have visited over a period of time.",
+    options: ["status bar", "task bar", "history list", "tool bar"],
+    correctAnswer: 2
+},
+{
+    question: "Which of the following is domain name suffixes?",
+    options: [".com", ".net", ".com and .net", "None of these"],
+    correctAnswer: 0
+},
+{
+    question: "Who is the father of computer?",
+    options: ["Charles Babbage", "Ada Augusta", "John Napier", "None of these"],
+    correctAnswer: 0
+},
+{
+    question: "Each excel file is called workbook because",
+    options: ["it can contain text and data.", "it can be modified", "it can contain many sheets worksheets and chart sheets", "None of the above"],
+    correctAnswer: 2
+},
+{
+    question: "FORTRAN is ",
+    options: ["File Transition", "Format Translation", "Formula Translation", "Floppy Translation"],
+    correctAnswer: 2
+},
+{
+    question: "An output device that uses words or message recorded on a magnetic medium to produce audio response is ",
+    options: ["magnetic tape", "voice response unit", "voice recognition unit", "voice band"],
+    correctAnswer: 1
+},
+{
+    question: "A gigabyte is equal to ",
+    options: ["1024 GB", "1024 MB", "1024*1024 MB", "1024 KB"],
+    correctAnswer: 1
+},
+{
+    question: "Which of the following is a form of data ",
+    options: ["numbers and characters ", "imamges", "sound", "All of these"],
+    correctAnswer: 3
+},
+{
+    question: "The term bit is short for ",
+    options: ["megabyte", "binary language", "binary digit", "binary number"],
+    correctAnswer: 2
+},
+{
+    question: "The PowerPoint view that displays only text (title and be bullet) is ",
+    options: ["slide show", "slide sorter view", "notes page view", "outline view"],
+    correctAnswer: 3
+},
+{
+    question: "RTGS means",
+    options: ["Real time genocide settlement", "Regional time genocide settlement", "Real time gross settlement", "Real time general settlement"],
+    correctAnswer: 2
+},
+{
+    question: "The modem does not",
+    options: ["produce sound similar to those you hear on the touch tone telephone.", "collect signals from low speed terminals and transmit them over a signal.", "line modulate electrical digital signal into an analog signal.", "demodulate an analog signal into digital signal."],
+    correctAnswer: 0
+},
+{
+    question: "A(n) ................ is private corporate network, used execlusively by company employees",
+    options: ["internet", "local area network", "peer-to-peer", "intranet"],
+    correctAnswer: 1
+},
+{
+    question: "The keystrokes Ctrl + I is used to ",
+    options: ["increase font size", "insert a line break", "indicate the text show be bold", "applies italic format to the selected text"],
+    correctAnswer: 3
+},
+{
+    question: "Which of the following is not a valid data type of excel?",
+    options: ["Number", "Character", "Label", "Date/time"],
+    correctAnswer: 1
+},
+{
+    question: "............ allows LAN users to share computer programs and data.",
+    options: ["Communication server", "Print server", "File server", "None of the above"],
+    correctAnswer: 2
+},
+{
+    question: "The e-commerce domain that involves business activity initiated by the consumer and targeted to businesses is known as ",
+    options: ["Consumer to Consumer (C2C)", "Business to Business (B2B)", "Consumer to Business (C2B)", "Business to Consumer (B2C)"],
+    correctAnswer: 2
+},
+{
+    question: "Computer work when instructions in any language are given to it.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "Tables can be drawn through insert tab in MS-Word.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "Tracing or Clearing cell content is same as deleting a cell.",
+    options: ["True ", "False"],
+    correctAnswer: 1
+},
+{
+    question: "WWW is a system of interlinked web hypertext documents, unavailable on Internet.",
+    options: ["True ", "False"],
+    correctAnswer: 1
+},
+{
+    question: "Computer program that helps to view WWW document is called Web browser.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "A font is a named set of characters that have the same characteristics.",
+    options: ["True ", "False"],
+    correctAnswer: 0
+},
+{
+    question: "We can't delete the Recycle bin icon but we can make it invisible.",
+    options: ["True ", "False"],
+    correctAnswer: 0
+},
+{
+    question: "Linux and MS Windows may be installed on one system.",
+    options: ["True ", "False"],
+    correctAnswer: 0
+},
+{
+    question: "Nibble is a collection of files.",
+    options: ["True ", "False"],
+    correctAnswer: 1
+},
+{
+    question: "There is no limit on the amount of bunds that could be transferred using RTGS.",
+    options: ["True ", "False"],
+    correctAnswer: 1
+},
+{
+    question: "Rows are vertical lines in table.",
+    options: ["True ", "False"],
+    correctAnswer: 1
+},
+{
+    question: "The bits in byte are normally numbered from zero to six.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "Screensaver on your desktop appears when computer is idle for a while.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "WWW stands for World Wide Web.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "OMR is used for correction of MCQ paper.",
+    options: ["True ", "False"],
+    correctAnswer: 0
+},
+{
+    question: "KB stands for kit byte.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "There is only one wayto start Microsoft Word, which is by office shortcut bar.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "'Add/remove tools' is found in accessories.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "Super computer Super computer is a symbol of fifth generation computer.",
+    options: ["True ", "False"],
+    correctAnswer: 0
+},
+{
+    question: "Windows is the operating system of computer.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "In star topology, any node can communicate with any other node directly.",
+    options: ["True ", "False"],
+    correctAnswer: 1
+},
+{
+    question: "One of the advantages of a PC network is that the access to the Internet is quicker.",
+    options: ["True ", "False"],
+    correctAnswer: 1
+},
+{
+    question: "You can apply sound effects to your slides in your presentation.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "The small pictures you see on the desktop are called Task bar.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "Motherboard is also known as system board.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "RTOS i stands for Real Time Operating System.",
+    options: ["True ", "False"],
+    correctAnswer: 0
+},
+{
+    question: "Computer cannot understand the binary language.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "RAM is a temporary memory.",
+    options: ["True", "False"],
+    correctAnswer: 0
+},
+{
+    question: "Audio output devices can output only music.",
+    options: ["True", "False"],
+    correctAnswer: 1
+},
+{
+    question: "You can add items to the start menu of windows.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "MS-Power Point is a spread sheet software.",
+    options: ["True","False"],
+    correctAnswer: 1
+},
+{
+    question: "Computer is a manual machine.",
+    options: ["True","False"],
+    correctAnswer: 1
+},
+{
+    question: "Debugging is the process of finding errors in software code.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "Computer is an electronic device.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "File structure in Linux is hierarchical.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "LLL is advance computer language.",
+    options: ["True","False"],
+    correctAnswer: 1
+},
+{
+    question: "Softcopy is a term applied to multiple pages of computer-printed reports.",
+    options: ["True","False"],
+    correctAnswer: 1
+},
+{
+    question: "By default the hyperlink color is blue.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "A cache memory is faster than main memory.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "1TB = 1024 MB",
+    options: ["True","False"],
+    correctAnswer: 1
+},
+{
+    question: "DBMS stands for DataBase Management System.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "Point to point connection, more than two devices can share a single link.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "Full form of 'e-commerce' is Electronic Commerce.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "Multimedia software helps you carry out tasks, such as typing a document or creating a spreadsheet.",
+    options: ["True","False"],
+    correctAnswer: 1
+},
+{
+    question: "You can cut or copy and paste a table to an other location in a document, just as you would text.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "Payroll is a type of application software.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "The type of operating system software you use depends on your computer's application.",
+    options: ["True","False"],
+    correctAnswer: 1
+},
+{
+    question: "RAM is a volatile memory.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "Word processing software is used to create letters, papers, or other basic documents.",
+    options: ["True","False"],
+    correctAnswer: 0
+},
+{
+    question: "Bank Mitra is a Business correpondet",
+    options: ["True","False"],
+    correctAnswer: 0
+}
+          
+          
+          
+          
+      
+        ];
+
+
+        // Timer function
+        function startTimer() {
+            startTime = new Date().getTime();
+
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = seconds % 60;
+                const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+                const formattedSeconds = remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds;
+                return `${formattedMinutes}:${formattedSeconds}`;
+            }
+
+            timerInterval = setInterval(() => {
+                const currentTime = new Date().getTime();
+                const elapsedTimeInSeconds = Math.floor((currentTime - startTime) / 1000);
+                document.getElementById("timer").textContent = formatTime(elapsedTimeInSeconds);
+            }, 1000);
+        }
+
+        // Function to stop the timer and grade the test
+        function stopTimerAndGrade() {
+            clearInterval(timerInterval);
+            endTime = new Date().getTime();
+            const elapsedSeconds = Math.floor((endTime - startTime) / 1000);
+            const elapsedMinutes = Math.floor(elapsedSeconds / 60);
+            const remainingSeconds = elapsedSeconds % 60;
+
+            let scoreWithoutNegativeMarking = 0;
+            let scoreWithNegativeMarking = 0;
+            let incorrectQuestions = [];
+            let unansweredQuestions = [];
+
+            for (let i = 0; i < questions.length; i++) {
+                const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (userAnswer) {
+                    const userAnswerIndex = parseInt(userAnswer.value) - 1;
+                    if (userAnswerIndex === questions[i].correctAnswer) {
+                        scoreWithoutNegativeMarking++;
+                        scoreWithNegativeMarking++;
+                    } else {
+                        incorrectQuestions.push({
+                            questionNumber: i + 1,
+                            question: questions[i].question,
+                            correctAnswer: questions[i].options[questions[i].correctAnswer],
+                            userAnswer: questions[i].options[userAnswerIndex]
+                        });
+                        scoreWithNegativeMarking -= 0.25;
+                    }
+                } else {
+                    unansweredQuestions.push(i + 1);
+                }
+            }
+
+            const result = document.getElementById("result");
+            result.innerHTML = `<p>Score without negative marking: ${scoreWithoutNegativeMarking} / ${questions.length}</p>`;
+            result.innerHTML += `<p>Score with negative marking of -0.25 for each incorrect response: ${scoreWithNegativeMarking} / ${questions.length}</p>`;
+
+            if (unansweredQuestions.length > 0) {
+                result.innerHTML += "<p class='unanswered'>Unanswered questions:</p>";
+                for (const questionNumber of unansweredQuestions) {
+                    result.innerHTML += `<div class="w3-container w3-white"><p class='Bold'>Ques ${questionNumber}: ${questions[questionNumber - 1].question} </p><p style="color:green;" class='Bold'>- ${questions[questionNumber - 1].options[questions[questionNumber - 1].correctAnswer]}</p></div>`;
+                }
+            }
+
+            if (incorrectQuestions.length > 0) {
+                result.innerHTML += "<p class='incorrect'>Incorrect answers:</p>";
+                for (const { questionNumber, question, userAnswer, correctAnswer } of incorrectQuestions) {
+                    result.innerHTML += `<div class="w3-container w3-white"><p class="Bold">Ques ${questionNumber}: ${question} </p><p style="color:red; text-decoration: line-through;"> - Your Ans: ${userAnswer} </p><p style="color:green;" class="Bold"> - Correct Ans: ${correctAnswer}</p></div>`;
+                }
+            } else {
+                result.innerHTML += "<p>Congratulations! You answered all questions correctly.</p>";
+            }
+
+            result.innerHTML += `<p>You took ${elapsedMinutes} minutes and ${remainingSeconds} seconds to complete the test.</p>`;
+        }
+
+        // Dynamically generate the questions and options
+        const questionsContainer = document.getElementById("questionsContainer");
+        for (let i = 0; i < questions.length; i++) {
+            const questionDiv = document.createElement("div");
+            questionDiv.className = "question";
+            const questionP = document.createElement("p");
+            questionP.textContent = `${i + 1}. ${questions[i].question}`;
+
+            const choicesDiv = document.createElement("div");
+            choicesDiv.className = "choices";
+
+            for (let j = 0; j < questions[i].options.length; j++) {
+                const label = document.createElement("label");
+                const input = document.createElement("input");
+                input.type = "radio";
+                input.name = `q${i}`;
+                input.value = `${j + 1}`;
+                label.appendChild(input);
+                label.appendChild(document.createTextNode(` ${questions[i].options[j]}`));
+                choicesDiv.appendChild(label);
+            }
+
+            questionDiv.appendChild(questionP);
+            questionDiv.appendChild(choicesDiv);
+            questionsContainer.appendChild(questionDiv);
+        }
+
+        startTimer();
+    </script>
+</body>
+</html>
