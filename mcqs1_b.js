@@ -1,5 +1,5 @@
         // Define the questions and answers dynamically
-        const questions = [
+        const questionsB = [
     
 {
     question: "Computer work when instructions in any language are given to it.",
