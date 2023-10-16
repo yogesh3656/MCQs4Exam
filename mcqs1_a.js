@@ -1,4 +1,4 @@
-    const questions =  [
+    const questionsA =  [
             {
                 question: "The .......... effects are used to apply movement to the images and objects in slides.",
                 options: ["(a).transition", "(b).animation", "(c).Both (a) and (b)", "(d). None of these"],
