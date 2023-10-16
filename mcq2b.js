@@ -1,6 +1,6 @@
  const questionsB =  [
 {
-    question: "In the E-mail address Arihant@sou.edu, "Arihant" is passward.",
+    question: "In the E-mail address Arihant@sou.edu, 'Arihant' is passward.",
     options: ["True","False"],
     correctAnswer: 1
 },
