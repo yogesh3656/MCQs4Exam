@@ -127,7 +127,7 @@
     correctAnswer: 0
 },
 {
-    question: "RTOS i stands for Real Time Operating System.",
+    question: "RTOS is stands for Real Time Operating System.",
     options: ["True ", "False"],
     correctAnswer: 0
 },
